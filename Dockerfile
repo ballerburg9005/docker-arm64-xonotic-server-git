@@ -34,8 +34,8 @@ FROM ubuntu:latest
 COPY --from=0 /xonotic /xonotic
 WORKDIR /
 #COPY xonotic /xonotic
-COPY xonotic/libs /lib/
-COPY xonotic/libs/blind_id /bin/
+COPY --from=0 /xonotic/libs /lib/
+COPY --from=0 /xonotic/libs/blind_id /bin/
 
 WORKDIR /xonotic
 
