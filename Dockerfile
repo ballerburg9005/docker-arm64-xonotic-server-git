@@ -31,7 +31,7 @@ RUN \
 
 FROM ubuntu:latest
 
-COPY --from=0 /xonotic .
+COPY --from=0 /xonotic /xonotic
 WORKDIR /
 #COPY xonotic /xonotic
 COPY xonotic/libs /lib/
