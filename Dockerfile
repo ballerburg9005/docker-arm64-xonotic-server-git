@@ -9,7 +9,7 @@ WORKDIR /
 
 RUN \
   apt-get update && \
-  apt-get -y install autoconf build-essential curl git libtool libgmp-dev libjpeg-turbo8-dev libsdl2-dev libxpm-dev xserver-xorg-dev zlib1g-dev unzip zip && \ 
+  DEBIAN_FRONTEND=noninteractive apt-get -yq install autoconf build-essential curl git libtool libgmp-dev libjpeg-turbo8-dev libsdl2-dev libxpm-dev xserver-xorg-dev zlib1g-dev unzip zip && \ 
   git clone git://git.xonotic.org/xonotic/xonotic.git && \
   mv xonotic xonotic-git && \
   cd xonotic-git && \
