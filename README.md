@@ -1,0 +1,82 @@
+### Docker aarch64 (arm64, armhf) Xonotic Server
+
+**USING: xonotic-git**
+
+**ATTENTION: server key files do not work yet, and I didn't do a final test on the build!**
+
+The following instructions assume that you are cross-compiling on your PC for some ARM box.
+
+Please note that Xonotic dedicated server eats like 20x times the CPU that Quake 3 dedicated server does, to do virtually just the same thing. It will probably max out the CPU with 4 players in the league of Core2Quad, Rasperri Pi 3, i5-2515, s905 and similar. Because of this, please only use beefy cutting-edge Xeon / POWER7 (or better) accelerated muscle servers on the public server list!
+
+## Docker setup
+* Use root account for all commands
+* Install the following packages in your distribution: docker, qemu-user-static
+
+
+## Enable buildx for docker
+```
+ if [[  -a ~/.docker/config.json ]]; then echo "\n\nplease add it by hand\!"; else  mkdir ~/.docker/ >& /dev/null; echo '{"experimental": "enabled"}' > ~/.docker/config.json; fi
+```
+
+
+## Sanity check on docker builder
+
+Check for builders and delete them.
+```
+docker buildx ls
+docker buildx rm default
+docker buildx rm somebuilder
+
+# run this several times if the next step doesn't work out.
+systemctl restart docker
+docker run --rm --privileged multiarch/qemu-user-static:register --reset
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+```
+
+Now it should look like this:
+```
+NAME/NODE DRIVER/ENDPOINT STATUS  PLATFORMS
+default * docker                  
+  default default         running linux/amd64, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
+```
+
+Make sure it says "default * docker", that means that you are using the "docker" driver and not Buildkit, so that local packages can be accessed by other local packages.
+Make sure it says linux/arm64 obviously.
+
+
+## Building the image
+
+``` 
+docker buildx build --platform linux/arm64 -t mylocalpkg/xonotic-server ./xonotic-server/Dockerfile
+```
+
+
+
+## Saving and deploying the package
+ 
+```
+docker save ballerburg9005/xonotic-server | gzip > xon.gz
+scp xon.gz root@192.168.0.2:/storage/
+
+```
+
+
+## Installing and running Xonotic
+
+SSH into your box.
+
+```
+docker load -i /storage/xon.gz
+docker run --name xonotic-server -p 26000-26010:26000-26010 -p 26000-26010:26000-26010/udp -v /storage/xonotic:/root/.xonotic ballerburg9005/xonotic-server
+```
+
+Add this to /etc/rc.local for start at boot
+
+```
+docker restart xonotic-server&
+```
+
+
+## Configuring the server
+
+Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https://gitlab.com/xonotic/xonotic/-/wikis/home

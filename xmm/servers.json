@@ -1,0 +1,14 @@
+{
+  "insta": {
+    "target_dir": "~/.xonotic/data_insta/",
+    "package_db": "~/.xmm/packages-insta.db"
+  },
+  "kansas": {
+    "target_dir": "~/.xonotic/data_public/",
+    "package_db": "~/.xmm/packages-public.db"
+  },
+  "overkill": {
+    "target_dir": "~/.xonotic/data_overkill/",
+    "package_db": "~/.xmm/packages-overkill.db"
+  }
+}
