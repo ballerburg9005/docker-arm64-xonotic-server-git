@@ -47,7 +47,7 @@ Make sure it says linux/arm64 obviously.
 ## Building the image
 
 ``` 
-docker buildx build --platform linux/arm64 -t mylocalpkg/xonotic-server ./xonotic-server/Dockerfile
+docker buildx build --platform linux/arm64 -t mylocalpkg/xonotic-server .
 ```
 
 
@@ -55,7 +55,7 @@ docker buildx build --platform linux/arm64 -t mylocalpkg/xonotic-server ./xonoti
 ## Saving and deploying the package
  
 ```
-docker save ballerburg9005/xonotic-server | gzip > xon.gz
+docker save mylocalpkg/xonotic-server | gzip > xon.gz
 scp xon.gz root@192.168.0.2:/storage/
 
 ```
@@ -67,7 +67,7 @@ SSH into your box.
 
 ```
 docker load -i /storage/xon.gz
-docker run --name xonotic-server -p 26000-26010:26000-26010 -p 26000-26010:26000-26010/udp -v /storage/xonotic:/root/.xonotic ballerburg9005/xonotic-server
+docker run --name xonotic-server -p 26000-26010:26000-26010 -p 26000-26010:26000-26010/udp -v /storage/xonotic:/root/.xonotic mylocalpkg/xonotic-server
 ```
 
 Add this to /etc/rc.local for start at boot
