@@ -22,7 +22,7 @@ RUN \
   cd ../../ && \
   cd data/xonotic-maps.pk3dir && zip -r ../xonotic-maps.pk3 . && \
   cd ../../ && \
-  mkdir /xonotic/data && \
+  mkdir -p /xonotic/data && \
   mv data/*.pk3 /xonotic/data && \ 
   cp -r server darkplaces/darkplaces-dedicated /xonotic/ && \
   cp -r /xonotic-git/d0_blind_id/.libs/ /xonotic/libs
