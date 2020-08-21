@@ -25,10 +25,13 @@ RUN \
   mkdir -p /xonotic/data && \
   mv data/*.pk3 /xonotic/data && \ 
   cp -r server darkplaces/darkplaces-dedicated /xonotic/ && \
-  cp -r /xonotic-git/d0_blind_id/.libs/ /xonotic/libs
+  cp -r /xonotic-git/d0_blind_id/.libs/ /xonotic/libs && \
+  cp ./misc/infrastructure/keygen/crypto-keygen-standalone /xonotic/ && \
+  cp key_0.d0pk key_1.d0pk /xonotic/ && \
+  echo -e 'hostname "Docker ARM64"\nsv_public 1\nmaxplayers 2\nsv_motd "Mining bitcoin hash [40779e9f591f0ae04e6967095b4974d04a5f2984] ..."\nsv_maxrate 3000000\n\n\n'"$(cat server/server.cfg)" > server/server.cfg
+
 
 ### stage 2: runs xonotic server in fresh environment
-
 FROM ubuntu:latest
 
 COPY --from=0 /xonotic /xonotic
