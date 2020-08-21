@@ -72,7 +72,7 @@ SSH into your box.
 
 ```
 docker load -i /storage/xon.gz
-docker run --name xonotic-server -p 26000-26010:26000-26010 -p 26000-26010:26000-26010/udp -v /storage/xonotic:/root/.xonotic mylocalpkg/xonotic-server
+docker run --name xonotic-server -p 26000-26010:26000-26010 -p 26000-26010:26000-26010/udp --cap-add=sys_nice -v /storage/xonotic:/root/.xonotic mylocalpkg/xonotic-server
 ```
 
 Add this to /etc/rc.local for start at boot
