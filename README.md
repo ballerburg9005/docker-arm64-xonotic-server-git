@@ -66,7 +66,7 @@ scp xon.gz root@192.168.0.2:/storage/
 ```
 
 
-## Installing and running Xonotic
+## Installing and running the image
 
 SSH into your box.
 
