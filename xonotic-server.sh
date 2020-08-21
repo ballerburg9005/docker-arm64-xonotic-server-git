@@ -10,7 +10,7 @@ fi
 rm ~/.xonotic/lock
 
 while true; do
-	nice -10 ./darkplaces-dedicated -xonotic +serverconfig
+	nice -n -1 ./darkplaces-dedicated -xonotic +serverconfig
 	echo "server quit unexpected!!! restarting ..."
 	sleep 1
 done

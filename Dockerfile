@@ -44,7 +44,7 @@ WORKDIR /xonotic
 
 RUN \ 
    apt-get update && \
-   apt-get -y install libjpeg-turbo8 zlib1g
+   apt-get -y install libjpeg-turbo8 zlib1g curl
 
 ## needs pip, installs like 250MB extra dependencies 
 ## better manage packages on your PC, then just rsync the folder to your box
