@@ -8,7 +8,9 @@ If you want to just download and run the server, pull it from hub.docker.io:
 docker pull ballerburg9005/xonotic-server-arm64
 ```
 
-Please note that Xonotic dedicated server eats a lot of CPU compared to games like Quake 3, and a Rasperry 2 can only handle about 4 players. Because of this, please only use beefy cutting-edge Xeon / POWER7 (or better) accelerated muscle servers on the public server list!
+Please note that Xonotic dedicated server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing, from day to day or at certain hours, however http://OVH.com does not. 
+
+Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
