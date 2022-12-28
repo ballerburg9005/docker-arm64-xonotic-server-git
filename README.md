@@ -2,7 +2,7 @@
 
 **USING: xonotic-git**
 
-*Now 0.8.5-ready.*
+*Now 0.8.5-ready, updated 2023*
 
 If you want to just download and run the server, pull it from hub.docker.io:
 
