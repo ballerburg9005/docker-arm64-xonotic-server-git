@@ -8,7 +8,7 @@ If you want to just download and run the server, pull it from hub.docker.io:
 docker pull ballerburg9005/xonotic-server-arm64
 ```
 
-Please note that Xonotic dedicated server eats like 20x times the CPU that Quake 3 dedicated server does, to do virtually just the same thing. It will probably max out the CPU with 4 players in the league of Core2Quad, Rasperri Pi 3, i5-2515, s905 and similar. Because of this, please only use beefy cutting-edge Xeon / POWER7 (or better) accelerated muscle servers on the public server list!
+Please note that Xonotic dedicated server eats a lot of CPU compared to games like Quake 3, and a Rasperry 2 can only handle about 4 players. Because of this, please only use beefy cutting-edge Xeon / POWER7 (or better) accelerated muscle servers on the public server list!
 
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
