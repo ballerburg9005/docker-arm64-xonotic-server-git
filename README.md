@@ -99,7 +99,7 @@ Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https:
 | Model Type                        | Processor Name     | Mem used | CPU idle | players @100% | Xonotic version | Note                        |
 |-----------------------------------|--------------------|----------|----------|---------------|-----------------|-----------------------------|
 | Amlogic S905D                     | Cortex A53         | 400M     | 20%      | 4             | 2020            |                             |
-| Amlogic S905D                     | Cortex A53         | 400M     | 30%      | 4             | 30.12.2022      | CPU spikes @0.2Hz / broken  |
+| Amlogic S905D                     | Cortex A53         | 400M     | 30%      | ?             | 30.12.2022      | CPU spikes @0.2Hz / broken  |
 
 Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
