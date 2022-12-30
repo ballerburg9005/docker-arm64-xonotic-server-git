@@ -95,11 +95,10 @@ Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https:
 
 ## Performance
 
-Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
-
-
 | Model Name                                 | Processor Name                  | Mem used | CPU no players | players @100% CPU | Xonotic version |
 |--------------------------------------------|---------------------------------|----------|----------------|-------------------|-----------------|
 | Mecool KII Pro                             | Cortex A53                      | 400M     | 30%            | 4                 | 30.12.2022      |
+
+Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
 
