@@ -14,6 +14,13 @@ Please note that Xonotic dedicated server eats 10x more CPU than e.g. Quake 3 se
 
 Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
+
+| Model Name                                 | Processor Name                  | Mem used | CPU no players | players @100% CPU |
+|--------------------------------------------|---------------------------------|----------|----------------|-------------------|
+| Mecool KII Pro                             | Cortex A53                      | 400M     | 30%            | 4                 |
+
+
+ 30.9 20.5   1:43.46 darkplaces-dedi30.9
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
 
