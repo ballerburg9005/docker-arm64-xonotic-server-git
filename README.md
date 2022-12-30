@@ -12,15 +12,6 @@ docker pull ballerburg9005/xonotic-server-arm64
 
 Please note that Xonotic dedicated server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
 
-Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
-
-
-| Model Name                                 | Processor Name                  | Mem used | CPU no players | players @100% CPU | Xonotic version |
-|--------------------------------------------|---------------------------------|----------|----------------|-------------------|-----------------|
-| Mecool KII Pro                             | Cortex A53                      | 400M     | 30%            | 4                 | 30.12.2022      |
-
-
- 30.9 20.5   1:43.46 darkplaces-dedi30.9
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
 
@@ -101,3 +92,14 @@ docker restart xonotic-server&
 ## Configuring the server
 
 Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https://gitlab.com/xonotic/xonotic/-/wikis/home
+
+## Performance
+
+Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
+
+
+| Model Name                                 | Processor Name                  | Mem used | CPU no players | players @100% CPU | Xonotic version |
+|--------------------------------------------|---------------------------------|----------|----------------|-------------------|-----------------|
+| Mecool KII Pro                             | Cortex A53                      | 400M     | 30%            | 4                 | 30.12.2022      |
+
+
