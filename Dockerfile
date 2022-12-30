@@ -14,6 +14,8 @@ RUN \
   mv xonotic xonotic-git && \
   cd xonotic-git && \
   ./all update -l best && \
+  cd data/xonotic-data.pk3dir && git checkout tags/xonotic-v0.8.2 && cd ../../ && \
+  cd gmqcc && git checkout tags/xonotic-v0.8.2 && cd .. && \
   MAKEFLAGS="-j8" ./all compile -r dedicated && \
   ( rm -rf data/xonotic-music.pk3dir data/*/textures data/*/sound data/*/gfx data/*/env || true ) && \
   ( find data/ -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.jpeg' -o -iname '*.tga' -o -iname '*.png' -o -iname '*.wav' -o -iname '*.ogg' -o -iname '*.mp3' -o -iname '*.dem' \) -exec rm '{}' \; || true ) && \
