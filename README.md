@@ -93,6 +93,7 @@ docker restart xonotic-server&
 
 Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https://gitlab.com/xonotic/xonotic/-/wikis/home
 
+
 ## Performance
 
 | Model Name                                 | Processor Name                  | Mem used | CPU no players | players @100% CPU | Xonotic version |
