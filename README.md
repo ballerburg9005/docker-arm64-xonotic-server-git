@@ -96,9 +96,10 @@ Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https:
 
 ## Performance
 
-| Model Name                                 | Processor Name                  | Mem used | CPU no players | players @100% CPU | Xonotic version |
-|--------------------------------------------|---------------------------------|----------|----------------|-------------------|-----------------|
-| Mecool KII Pro (Amlogic S905D)             | Cortex A53                      | 400M     | 30%            | 4                 | 30.12.2022      |
+| Model Name                        | Processor Name     | Mem used | CPU no players | players @100% CPU | Xonotic version | Note                    |
+|-----------------------------------|--------------------|----------|----------------|-------------------|-----------------|-------------------------|
+| Mecool KII Pro (Amlogic S905D)    | Cortex A53         | 400M     | 20%            | 4                 | 2020            |                         |
+| Mecool KII Pro (Amlogic S905D)    | Cortex A53         | 400M     | 30%            | 4                 | 30.12.2022      | CPU spikes 5s / broken  |
 
 Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
