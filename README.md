@@ -8,9 +8,7 @@ docker pull ballerburg9005/xonotic-server-arm64:v0.8.2
 
 Note that I used the :v0.8.2 tag here (see "Selecting Xonotic Version").
 
-Please note that Xonotic server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. 
-
-It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
+Please note that Xonotic server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
 
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
