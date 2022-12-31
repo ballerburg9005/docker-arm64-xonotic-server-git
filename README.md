@@ -1,16 +1,16 @@
 ### Docker aarch64 (arm64, armhf) Xonotic Server
 
-**USING: xonotic-git**
-
-*Now 0.8.5-ready, updated 2023*
-
 If you want to just download and run the server, pull it from hub.docker.io:
 
 ```
-docker pull ballerburg9005/xonotic-server-arm64
+docker pull ballerburg9005/xonotic-server-arm64:v0.8.2
 ```
 
-Please note that Xonotic dedicated server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
+Note that I used the :v0.8.2 tag here, because newer versions have awful performance (see "Selecting Xonotic Version").
+
+The 0.8.2 version eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. The latest Git had CPU spikes and was unplayable on my Cortex-A53. 
+
+It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
 
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
@@ -54,6 +54,18 @@ docker buildx create --name mybuilder
 docker buildx use mybuilder
 docker buildx inspect --bootstrap
 ```
+
+
+## Selecting Xonotic Version
+
+Edit the Dockerfile and add those two lines after "all update -l best", if they weren't already there:
+
+```
+  cd data/xonotic-data.pk3dir && git checkout tags/xonotic-v0.8.2 && cd ../../ && \
+  cd gmqcc && git checkout tags/xonotic-v0.8.2 && cd .. && \
+```
+
+There are other parts as well, like darkplaces (engine) or data-maps that you can switch the same way. But it rather seems to yield disadvantages.
 
 
 ## Building the image
