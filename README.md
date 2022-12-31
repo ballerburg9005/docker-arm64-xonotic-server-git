@@ -67,6 +67,8 @@ Edit the Dockerfile and add those two lines after "all update -l best", if they 
 
 There are other parts as well, like darkplaces (engine) or data-maps that you can switch the same way. But it rather seems to yield disadvantages.
 
+If you want the latest Git version, then just make sure those two lines are not there.
+
 
 ## Building the image
 
