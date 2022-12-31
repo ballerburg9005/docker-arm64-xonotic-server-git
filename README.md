@@ -20,9 +20,9 @@ The following instructions assume that you are cross-compiling on your PC for so
 * Install the following packages in your distribution: docker, qemu-user-static
 
 
-## Enable buildx for docker and set MTU to 1300 as workaround for random disconnects
+## Enable buildx for docker
 ```
- if [[  -a ~/.docker/config.json ]]; then echo "\n\nplease add it by hand\!"; else  mkdir ~/.docker/ >& /dev/null; echo '{"experimental": "enabled", "mtu":1300}' > ~/.docker/config.json; fi
+ if [[  -a ~/.docker/config.json ]]; then echo "\n\nplease add it by hand\!"; else  mkdir ~/.docker/ >& /dev/null; echo '{"experimental": "enabled"}' > ~/.docker/config.json; fi
 ```
 
 
