@@ -6,9 +6,9 @@ If you want to just download and run the server, pull it from hub.docker.io:
 docker pull ballerburg9005/xonotic-server-arm64:v0.8.2
 ```
 
-Note that I used the :v0.8.2 tag here, because newer versions have awful performance (see "Selecting Xonotic Version").
+Note that I used the :v0.8.2 tag here (see "Selecting Xonotic Version").
 
-The 0.8.2 version eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. The latest Git had CPU spikes and was unplayable on my Cortex-A53. 
+Please note that Xonotic server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. 
 
 It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
 
@@ -112,8 +112,7 @@ Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https:
 
 | Model Type                        | Processor Name     | Mem used | CPU idle | players @100% | Xonotic version | Note                        |
 |-----------------------------------|--------------------|----------|----------|---------------|-----------------|-----------------------------|
-| Amlogic S905D                     | Cortex A53         | 400M     | 20%      | 4             | 2020            |                             |
-| Amlogic S905D                     | Cortex A53         | 400M     | 30%      | ?             | 30.12.2022      | CPU spikes @0.2Hz / broken  |
+| Amlogic S905D                     | Cortex A53         | 400M     | 20%      | 4             | 2020, 0.8.2     |                             |
 
 Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
