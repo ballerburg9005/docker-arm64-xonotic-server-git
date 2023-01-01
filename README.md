@@ -1,6 +1,6 @@
 ### Docker aarch64 (arm64, armhf) Xonotic Server
 
-If you want to just download and run the server, pull it from [hub.docker.io](https://hub.docker.com/repository/docker/ballerburg9005/xonotic-server-arm64).
+**If you want to just download and run the server, pull it from [hub.docker.io](https://hub.docker.com/repository/docker/ballerburg9005/xonotic-server-arm64).**
 
 
 Please note that Xonotic server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
