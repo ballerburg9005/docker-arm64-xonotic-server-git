@@ -1,7 +1,7 @@
 # multi-stage docker file
 
 ### stage 1: builds xonotic in /xonotic
-FROM ubuntu:latest
+FROM debian:11.6
 WORKDIR /
 
 # follow steps here https://gitlab.com/xonotic/xonotic/-/wikis/Repository_Access
@@ -9,7 +9,7 @@ WORKDIR /
 
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -yq install autoconf build-essential curl git libtool libgmp-dev libjpeg-turbo8-dev libsdl2-dev libxpm-dev xserver-xorg-dev zlib1g-dev unzip zip wget && \
+  DEBIAN_FRONTEND=noninteractive apt-get -yq install autoconf build-essential curl git libtool libgmp-dev libjpeg62-turbo-dev libsdl2-dev libxpm-dev xserver-xorg-dev zlib1g-dev unzip zip wget && \
   git clone https://gitlab.com/xonotic/xonotic.git && \
   mv xonotic xonotic-git && \
   cd xonotic-git && \
