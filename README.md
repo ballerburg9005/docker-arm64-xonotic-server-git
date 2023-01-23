@@ -2,8 +2,10 @@
 
 **If you want to just download and run the server, pull it from [hub.docker.io](https://hub.docker.com/r/ballerburg9005/xonotic-server-arm64).**
 
+Please note that Xonotic dedicated server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. Cortex processors seem to be very very bad for Xonotic in terms of performance. Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
-Please note that Xonotic server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. It is better to use a good VPS for $3/month. 1 Vcore can mean anything, but usually it equals about 16 players. Beware though that many VPS providers stutter and suck randomly due to crappy load balancing (= unusable for Xonotic), from day to day or at certain hours, however http://OVH.com does not. 
+NEW: Check out Oracle Cloud Forever Free Tier! You get 4 super beefy dedicated Ampere/ARM cores with 24GB RAM on a 600Mbit connection in an undercrowded ARM-exclusive datacenter for $0 (no hidden cost!). More playtesting is needed to be certain but so far everything checks out A+++ . Sounds unbelievable, but true. Don't pick the x86 option, it sometimes sucks especially on weekends. https://youtu.be/_m21FxvuQ4c?t=258
+
 
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
 
