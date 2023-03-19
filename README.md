@@ -4,7 +4,7 @@
 
 Please note that Xonotic dedicated server eats 10x more CPU than e.g. Quake 3 server, so a Raspberry Pi 2 can only handle about 4 players at most. Cortex processors seem to be very very bad for Xonotic in terms of performance. Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
-NEW: Check out Oracle Cloud Forever Free Tier! You get 4 super beefy dedicated Ampere/ARM cores with 24GB RAM on a 600Mbit connection in an undercrowded ARM-exclusive datacenter for $0 (no hidden cost!). More playtesting is needed to be certain but so far everything checks out A+++ . Supports more than 32 players on only one core. Sounds unbelievable, but true. Don't pick the x86 option, it sometimes sucks especially on weekends. https://youtu.be/_m21FxvuQ4c?t=258
+*NEW: Check out Oracle Cloud Forever Free Tier! You get 4 super beefy dedicated Ampere/ARM cores with 24GB RAM on a 600Mbit connection in an undercrowded ARM-exclusive datacenter for $0 (no hidden cost!). More playtesting is needed to be certain but so far everything checks out A+++ . Supports more than 32 players on only one core. Sounds unbelievable, but true. Don't pick the x86 option, it sometimes sucks especially on weekends. https://youtu.be/_m21FxvuQ4c?t=258*
 
 
 The following instructions assume that you are cross-compiling on your PC for some ARM box.
@@ -108,6 +108,7 @@ Edit the server.cfg in /storage/xonotic/data . See Xonotic documentation: https:
 | Model Type                        | Processor Name     | Mem used | CPU idle | players @100% | Xonotic version | Note                        |
 |-----------------------------------|--------------------|----------|----------|---------------|-----------------|-----------------------------|
 | Amlogic S905D                     | Cortex A53         | 400M     | 20%      | 4             | 2020, 0.8.2     |                             |
+| Oracle Cloud                      | Ampere             | 500M     | 1%       | >50           | 2023, 0.8.5     |                             |
 
 Please contact me if you have done tests and a different ARM processor, so I can list it here for people to know what to expect.
 
